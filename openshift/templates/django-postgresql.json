@@ -47,8 +47,8 @@
         "ports": [
           {
             "name": "web",
-            "port": 8080,
-            "targetPort": 8080
+            "port": 8989,
+            "targetPort": 8989
           }
         ],
         "selector": {
@@ -190,7 +190,7 @@
                 "image": " ",
                 "ports": [
                   {
-                    "containerPort": 8080
+                    "containerPort": 8989
                   }
                 ],
                 "readinessProbe": {
@@ -198,7 +198,7 @@
                   "initialDelaySeconds": 3,
                   "httpGet": {
                     "path": "/health",
-                    "port": 8080
+                    "port": 8989
                   }
                 },
                 "livenessProbe": {
@@ -206,7 +206,7 @@
                   "initialDelaySeconds": 30,
                   "httpGet": {
                     "path": "/health",
-                    "port": 8080
+                    "port": 8989
                   }
                 },
                 "env": [
